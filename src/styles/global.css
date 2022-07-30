@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --green-bg: #192a32;
+
+    --grey-bg: #a8bfc9;
+    --grey-bs: #6b8997;
+    --grey-txt: #a0b6c1;
+
+    --border-radius: 10px;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--green-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-scene {
+    width: 500px;
+}

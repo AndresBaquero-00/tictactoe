@@ -1,0 +1,70 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .3s, background-color .3s;
+    pointer-events: all;
+}
+
+.modal.present {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.modal.present .modal-content {
+    transform: none;
+    transition-delay: 0.5s;
+}
+
+.modal .modal-content {
+    width: 100%;
+    height: 275px;
+    background-color: #1f3641;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-family: 'Outfit';
+    letter-spacing: 1.5px;
+    transform: translateY(500px);
+    transition: transform .4s;
+}
+
+.modal-content p {
+    color: #a8bfc9;
+    font-size: 1.3em;
+}
+
+.modal-content label {
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 10px 0;
+    color: #a8bfc9;
+}
+
+.modal-content label span {
+    line-height: 2.5em;
+}
+
+.modal-content label.P2 {
+    color: #f2b137;
+}
+
+.modal-content label.P1 {
+    color: #31c3bd;
+}
+
+.modal-content .actions {
+    display: flex;
+    gap: 15px;
+}

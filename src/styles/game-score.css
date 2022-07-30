@@ -1,0 +1,44 @@
+
+.score {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-scores {
+    flex: 1 1;
+    border-radius: 15px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    font-family: 'Outfit';
+    gap: 0;
+}
+
+.game-scores label {
+    font-weight: 500;
+    color: #1f3641;
+    letter-spacing: .88px;
+}
+
+.game-scores b {
+    font-weight: 900;
+    color: #1f3641;
+    font-size: 25px;
+}
+
+.game-scores.X {
+    background-color: #31c3bd;
+}
+
+.game-scores.ties {
+    background-color: #a8bfc9;
+}
+
+.game-scores.O {
+    background-color: #f2b137;
+}

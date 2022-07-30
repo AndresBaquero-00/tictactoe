@@ -1,0 +1,73 @@
+
+.game-board {
+    margin: 20px 0;
+    width: 100%;
+
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    gap: 20px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    position: relative;
+
+    background-color: #1f3641;
+    border-radius: 15px;
+    box-shadow: inset 0 -8px 0 #10212a;
+    transition: box-shadow .1s ease-out, transform .1s ease-out, max-height .1s ease-out;
+}
+
+.box.active {
+    transform: translateY(4px);
+    pointer-events: none;
+    max-height: 136px;
+    box-shadow: inset 0 -4px 0 #10212a;
+}
+
+.box.active.O {
+    background: url(../assets/o.svg) no-repeat 50% #1f3641;
+}
+
+.box.active.X {
+    background: url(../assets/x.svg) no-repeat 50% #1f3641;
+}
+
+.box.active.O.match-3 {
+    background: url(../assets/o-black.svg) no-repeat 50% #F2B137;
+    box-shadow: inset 0 -4px 0 #CC8B13;
+}
+
+.box.active.X.match-3 {
+    background: url(../assets/x-black.svg) no-repeat 50% #31c3bd;
+    box-shadow: inset 0 -4px 0 #118c87;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    bottom: 0;
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-size .2s ease-out,opacity .2s ease-out;
+    opacity: 0;
+}
+
+.box.preview-O::after {
+    background-image: url(../assets/o-hover.svg);
+    background-size: 70px;
+    opacity: 1;
+}
+
+.box.preview-X::after {
+    background-image: url(../assets/x-hover.svg);
+    background-size: 70px;
+    opacity: 1;
+}
+
